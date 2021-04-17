@@ -1,4 +1,12 @@
 
+#------------------------------------------------------------------------------#
+# Code for the paper: Reopening California
+#                     Seeking Robust, Non-Dominated COVID-19 Exit Strategies.
+# 
+# Author: Pedro Nascimento de Lima
+# Copyright (C) 2021 by The RAND Corporation
+# See LICENSE.txt and README.txt for information on usage and licensing
+#------------------------------------------------------------------------------#
 
 #### Setup RDM Experiments -------------------------------------------------####
 

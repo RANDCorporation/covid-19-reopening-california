@@ -1,7 +1,7 @@
 
 
 #------------------------------------------------------------------------------#
-# Code for the paper: Reopening Under Deep Uncertainty: 
+# Code for the paper: Reopening California
 #                     Seeking Robust, Non-Dominated COVID-19 Exit Strategies.
 # 
 # Author: Pedro Nascimento de Lima
