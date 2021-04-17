@@ -1,0 +1,79 @@
+---
+title: "Setting Up the c19randepimod package"
+Author: Pedro Nascimento de Lima
+output:
+  pdf_document: default
+  rmarkdown::html_vignette: default
+vignette: >
+  %\VignetteIndexEntry{Package Set Up}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This short tutorial goes over the process of installing the package and calibrating the model for a single state.
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE
+)
+```
+
+# Installation
+
+First, download the source package (.tra.gz file) from the git repository. Then, install it using the `install_local` function from the `devtools` package.
+
+```{r}
+
+# If devtools is not isntalled, install it first:
+
+# install.packages(devtools)
+
+# devtools::install_local("C:/dev/covid-19/c19randepimod_1.0.0.tar.gz")
+
+```
+
+
+# Setting Up Inputs Files
+
+Before running the model, the package reads inputs from three excel spreadsheets. You can create a folder for your analysis by running the `setup_c19_folder` function. This function you create the inputs file you will need to run the model.
+
+```{r}
+library(c19randepimod)
+library(dplyr)
+
+# This function creates a folder and inputs files you need to run the model:
+setup_c19_folder(path = "analysis", overwrite =T) 
+
+```
+
+Once you have your inputs file in place, you can use the `get_augmented_inputs` function, which will be the backbone of your model.
+
+```{r}
+# This function creates a folder and inputs files you need to run the model:
+augm_inputs = get_augmented_inputs(inputs_path = "./analysis/template_analysis/inputs")
+
+```
+
+# Calibrating the Model
+
+Now you can create the model and Run the Calibration Process:
+
+```{r}
+
+model = augm_inputs %>%
+  prepare_inputs(.) %>%
+  c19model_amshi2s(., level = "state") %>%
+  calibrate(model = ., location_ids = 35, n_lhs = 2, parallel_mode = "PSOCK", cores = 2) %>%
+  compute_augmented_outputs(model = ., compute_econ_outputs = T, calibration = T)
+
+```
+
+Finally, plot the calibration results:
+
+```{r}
+
+plot(model)
+
+```

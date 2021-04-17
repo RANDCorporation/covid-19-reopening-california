@@ -1,0 +1,47 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# c19randepimod
+
+<!-- badges: start -->
+[![License: GPL-2](https://img.shields.io/badge/license-GPL--2-blue.svg)](https://cran.r-project.org/web/licenses/GPL-2)
+[![](https://img.shields.io/badge/doi-10.7249/TLA173--1-purple.svg)](https://doi.org/10.7249/TLA173-1)
+
+<!-- badges: end -->
+
+This is the R package behind [RAND's COVID-19 State policy Evaluation Tool](https://www.rand.org/pubs/tools/TLA173-1/tool.html). This package contains code that reads data from external APIs, calibrates the epidemiological model, runs the model for pre-specified scenarios and saves these results. This R package does not contain code for the webtool Frontend and the econ model.
+
+## Installation
+
+First, download the R package from the git repository. You can install the package from source using:
+
+```{r installation, eval=FALSE}
+
+# If you don't have devtools installed, install it first (make sure to )
+# install.packages("devtoools")
+
+devtools::install_local(path = "c19randepimod_1.0.0.tar.gz",upgrade = "never")
+
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example, eval=FALSE}
+library(c19randepimod)
+## basic example code
+```
+
