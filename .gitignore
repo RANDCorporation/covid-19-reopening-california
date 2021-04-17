@@ -1,0 +1,65 @@
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.RData
+
+# User-specific files
+.Ruserdata
+
+# Example code in package build process
+*-Ex.R
+
+# Output files from R CMD build
+/*.tar.gz
+
+# Output files from R CMD check
+/*.Rcheck/
+
+# RStudio files
+.Rproj.user/
+
+# produced vignettes
+vignettes/*.html
+vignettes/*.pdf
+
+# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+.httr-oauth
+
+# knitr and R markdown default cache directories
+*_cache/
+/cache/
+
+# Temporary files created by R markdown
+*.utf8.md
+*.knit.md
+
+# R Environment Variables
+.Renviron
+
+# ignore all output files by default
+/**/outputs/*
+
+# ignore c19randepimod files
+#c19randepimod/**/*
+#c19randepimod/**
+
+# Core files
+core*
+
+# dependencies files
+00_dependencies/*.tar.gz
+
+# rds files in general
+*.rds
+
+# input files
+01_calibration/inputs/*.xlsx
+
+# tableau files
+04_tableau_plots/*.hyper
+04_tableau_plots/*.emf
+04_tableau_plots/*.xlsx
+04_tableau_plots/*.twb
+04_tableau_plots/*.twbx
