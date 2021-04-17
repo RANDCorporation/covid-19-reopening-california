@@ -54,6 +54,10 @@ core*
 # rds files in general
 *.rds
 
+# 
+*.png
+*.pdf
+
 # input files
 01_calibration/inputs/*.xlsx
 
