@@ -29,19 +29,20 @@ Lima](https://www.rand.org/about/people/l/lima_pedro_nascimento_de.html),
 [Lawrence
 Baker](https://www.rand.org/about/people/b/baker_lawrence.html)
 
-<!-- badges: 
-
 ### Related publications
 
--   Forthcoming Paper: Reopening California: Seeking Robust, Non-Dominated COVID-19 Exit Strategies.
+  - Working Paper: [Reopening California: Seeking Robust, Non-Dominated
+    COVID-19 Exit
+    Strategies.](https://www.rand.org/pubs/working_papers/WRA1080-2.html)
 
--   Forthcoming RAND Perspective: Reopening California: How to reopen in the wake of the COVID-19 vaccine rollout?.
+  - Working Paper: [Modeling COVID-19 Nonpharmaceutical Interventions:
+    Exploring periodic NPI
+    strategies.](https://www.rand.org/pubs/working_papers/WRA1080-1.html)
 
--   Forthcoming Paper: Modeling COVID-19 Nonpharmaceutical Interventions: Exploring periodic NPI strategies.
-
--   Original Decision Suport Tool: [The Health and Economic Impacts of Nonpharmaceutical Interventions to Address COVID-19: A Decision Support Tool for State and Local Policymakers](https://www.rand.org/pubs/tools/TLA173-1.html)
-
-end -->
+  - Original Decision Support Tool: [The Health and Economic Impacts of
+    Nonpharmaceutical Interventions to Address COVID-19: A Decision
+    Support Tool for State and Local
+    Policymakers](https://www.rand.org/pubs/tools/TLA173-1.html)
 
 # Using this repository
 
