@@ -48,11 +48,11 @@ This repository uses [git lfs](https://git-lfs.github.com/). Make sure to downlo
 
 # The c19randepimod R package
 
-We created the `c19randepimod` R package to be create a set of generic functions that could be used across projects as our model evolved. The package contains functions that are used with our `c19model` class or with its lower-level classes. This allows us to create new model classes that use the same set of the underlying functions. We used different model classes for each of our publications, as we learned more about COVID-19. For example, our original state policy tool did not include vaccination, but the most recent model includes vaccination and a range of other uncertainties.
+We developed the `c19randepimod` R package specifically to inform policies during the COVID-19. pandemic The package includes a series of functions to gather data, define a `c19model` model class, calibrate the model, define experimental designs, run experiments and generate results. By defining our model as a class, we allow ourselves and future users to extend our original `c19model` over time. Currently, models based on the `c19model` class necessarily need to be compatible with the `deSolve` package, but future versions can relax this requirement and allow stochastic models or ABMs. This allows us to create new model classes that inherit the functions implemented for the `c19model` class regardless of the model structure. Since our [first publication](https://www.rand.org/pubs/tools/TLA173-1.html), we used different model classes for each of our publications as we learned more about COVID-19 and as our response to COVID-19 changed. For example, our original state policy tool published in May 2020 did not include vaccination, behavioral responses to vaccination and hesitancy, seasonality, and increases in transmissibility from variants, but the model used in the [Reopening California paper](https://www.rand.org/pubs/working_papers/WRA1080-2.html) does. This flexibility and model design choices proved to be helpful and instrumental for our work. They allowed us to publish a widely used tool within six weeks from conception to publication, and to follow up with analyses that reflected progress in the pandemic.
 
 ## Overview
 
-The figure below illustrates the main steps we take to run the model. The R package starts by gathering data from the [covidtracking api](https://covidtracking.com/data/api) and a spreadsheet containing model inputs using the `get_augmented_inputs` function. This function creates a model object that contains everything we need to calibrate the model. Then, we use the `calibrate` or the recent `calibrate_imabc` function to find parameters that can produce outcomes consistent with observed time-series.
+The figure below illustrates the main steps necessary to run the model. The R package starts by gathering data from the [covidtracking api](https://covidtracking.com/data/api) and a spreadsheet containing model inputs using the `get_augmented_inputs` function. This function creates a model object that contains everything we need to calibrate the model. Then, we use the `calibrate` or the recent `calibrate_imabc` function to find parameters that can produce outcomes consistent with observed time-series.
 
 ![](overview-figure.png "Model overview")
 
@@ -64,7 +64,7 @@ This folder is organized as follows:
 
 -   **./c19randepimod:** contains a snapshot of the c19randepimod R package code. We created this package to generalize functions that will be useful beyond this analysis. The package has been used for all the publications we list here, but this reposistory only contains code for the "Reopening California" paper.
 
--   **./00\_dependencies:** contains the dependencies necessary to run all analysis. Run the install\_dependencies.R file for the first time if needed. This will install the dependencies you need to run the model. Make sure you are using R \> 3.6.1.
+-   **./00\_dependencies:** contains the dependencies necessary to run all analyses. Run the install\_dependencies.R file for the first time if needed. This will install the dependencies you need to run the model. Make sure you are using R \> 3.6.1.
 
 -   **./01\_calibration:** contains scripts three R scripts. The first called 01\_calibration\_imabc.R sets up and runs the calibration by calling the function calibrate\_imabc. This function is contained in the file in the file calibrate\_imabc.R. The inputs folder contain the spreadsheets that are read in as inputs for the model.
 
@@ -72,7 +72,7 @@ This folder is organized as follows:
 
 -   **./03\_regret\_analysis:** contains the script 03\_regret-analysis.R that calls functions in regret-functions.R. This is where the results are read, and this is where we analyse the regret from different policies. This script produces the plots we use in our papers and presentations.
 
--   **./04\_tableau\_plots:** contains a tableau workbook we use to generate plots and summary tables. I use the tableau workbook to generate the summary tables in the strategy\_summaryes.xlsx.
+-   **./04\_tableau\_plots:** contains a tableau workbook we use to generate plots and summary tables. I use the tableau workbook to generate the summary tables in the strategy\_summaries.xlsx file.
 
 
 # Contact
